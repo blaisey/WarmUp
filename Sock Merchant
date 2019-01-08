@@ -1,0 +1,12 @@
+def sockMerchant(numOfSocks, pile):
+    socks = dict()
+    pairs = 0
+    for sock in pile:
+        if(sock in socks):
+            socks[sock] += 1
+        else:
+            socks[sock] = 1
+    
+    for sock in socks:
+        pairs += int(socks[sock]/2)
+    return pairs
